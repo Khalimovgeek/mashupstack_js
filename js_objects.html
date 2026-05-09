@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+   <script>
+    // objects
+        let person = {
+            firstName: 'kevin',     // key: value pair  --> together called properties
+            age: 32,
+            cars: {                 // nested object
+                bmw: 1,
+                audi: 2
+            },
+            sayHello: function() { console.log('Hello ' + person.firstName) }
+        }
+        document.writeln(typeof person);  // type of person
+
+        document.writeln("<br>");
+        // accessinf a value usning key
+        document.writeln(person.firstName) ; // dispalys name, here kevin
+        document.writeln("<br>");
+        document.writeln(person["firstName"]); // dispalys name, here kevin
+
+        // nested object ekement call
+        
+        document.writeln("<br>");
+        console.log(person.cars);  //displays the object
+        document.writeln("<br>");
+        document.writeln(person.cars.audi);  // dipalys the value inside audi
+        let student = { 
+            name: 'Kevin', 
+            age: 20,
+            marks: {
+                science: 70,
+                math: 75
+            },
+
+            // this keyword
+            
+        }
+
+        // accessing property of student object
+        console.log(student.marks);
+
+        // accessing property of marks object
+        console.log(student.marks.science); 
+
+
+
+        // object method
+        person.sayHello();
+
+        // built-in methods
+        let number = '54';
+        let result = parseInt(number);
+
+        console.log(result)
+        console.log(typeof(result))
+
+        //adding property
+        person.name = 'Kevin';
+
+        // method adding
+        person.alertMsg = function(){ window.alert('Hello' + person.name)}
+        person.getInfo= function(){console.log('The name is' + ' ' + this.name +
+    	', and his age is '+this.age+'.');}
+        person.alertMsg();
+
+        person.getInfo();
+
+   </script> 
+</body>
+</html>
