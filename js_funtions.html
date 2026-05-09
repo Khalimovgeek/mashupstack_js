@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funtions</title>
+</head>
+<body>
+
+    <button type="button" onclick="hello()">click</button>
+    <script>
+        // js funtions
+
+        function hello(){
+            alert("hello world");
+        }
+
+        //  funtion with argument
+
+        function sayHello(name){
+            console.log("Hello " +name+ ", I am from a function.");
+        }
+        sayHello("albin")
+        sayHello("Kevin"); // calling the function with name parameter as Kevin
+        sayHello("Reshma"); // calling the function with name parameter as Reshma
+
+        // return statement
+        function add(x, y) {
+            return (x + y);
+        }
+        sum_1 = add(10,5);
+        sum_2 = add(20,5);
+
+        console.log ("The first sum is "+sum_1)
+        console.log ("The second sum is "+sum_2)
+    </script>
+    <p>Outside myFunction() language is undefined.</p>
+
+    <p id="test1"></p>
+
+    <p id="test2"></p>
+
+    <script>
+        myFunction();
+
+        function myFunction() {
+            var language = "JavaScript";
+            document.getElementById("test1").innerHTML =
+            typeof language + " " + language;
+        }
+
+        document.getElementById("test2").innerHTML = typeof language;
+    </script>
+</body>
+</html>
