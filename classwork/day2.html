@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js day2 </title>
+</head>
+<body>
+    <h3 style="font-family: sans-serif;">Library</h3>
+
+    <script>
+        let book = {
+            title: "The Alchemist",
+            author: "Paulo Coelho",
+            year: 1998,
+            getSummary : function(){
+               return "The book" + this.title + " was written by " + this.author + "in " + this.year + ".";
+            }
+        }
+       
+        function printBookSummary(bookobj){
+             document.writeln(bookobj.getSummary());
+        }
+        printBookSummary(book);
+    </script>
+</body>
+</html>
