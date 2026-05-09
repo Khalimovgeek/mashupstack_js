@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Total Earnings</h3>
+    <p id="total"></p>
+
+    <h3>Total Earnings after the price increase</h3>
+    <p id="newTotal"></p>
+    <script>
+        // price of each item
+        var shirt = 400;
+        var cap   = 150;
+
+        // quantity
+        var no_of_shirt = 5;
+        var no_of_caps  = 3;
+
+        // total
+        var total = (shirt*no_of_shirt) + (cap*no_of_caps);
+
+        // output
+        document.getElementById("total").innerHTML = total;
+
+        // price increase to 450
+        shirt = 450;
+
+         total = (shirt*no_of_shirt) + (cap*no_of_caps);
+
+        // output
+        document.getElementById("newTotal").innerHTML = total;
+    </script>
+</body>
+</html>
