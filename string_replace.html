@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+</head>
+<body>
+    <h2>JavaScript String Methods</h2>
+
+    <p>Replace "Mashupstack" with "Mashup" in the paragraph below:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo">Visit Mashupstack!.  Mashupstack is Awesome!</p>
+
+    <script>
+        function myFunction() {
+            var str = document.getElementById("demo").innerHTML; 
+            var txt = str.replace("Mashupstack","Mashup");
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+
+    <!-- case sensitivity -->
+    <h2>JavaScript String Methods</h2>
+
+    <p>Replace "Mashupstack" with "stack" in the paragraph below:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo1">Visit Mashupstack</p>
+
+    <script>
+        function myFunction() {
+            var str = document.getElementById("demo1").innerHTML; 
+            var txt = str.replace("MASHUPSTACK" , "Stack");           // this will not work
+            document.getElementById("demo1").innerHTML = txt;
+        }
+    </script>
+
+    <h2>JavaScript String Methods</h2>
+
+    <p>Replace "Mashupstack" with "stack" in the paragraph below:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo2">Visit Mashupstack</p>
+
+    <script>
+        function myFunction() {
+            var str = document.getElementById("demo2").innerHTML; 
+            var txt = str.replace(/MASHUPSTACK/i , "Stack");            // this will 
+            document.getElementById("demo2").innerHTML = txt;
+        }
+    </script>
+
+    <h2>JavaScript String Methods</h2>
+
+    <p>Replace "Mashupstack" with "stack" in the paragraph below:</p>
+    <p>Replace "Mashupstack" with "stack" in the paragraph below:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo3">Visit Mashupstack</p>
+
+    <script>
+        function myFunction() {
+            var str = document.getElementById("demo3").innerHTML; 
+            var txt = str.replace(/MASHUPSTACK/gi , "Stack");            // this also works
+            document.getElementById("demo3").innerHTML = txt;
+        }
+    </script>
+</body>
+</html>

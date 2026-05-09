@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string object</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <script>
+        var x = "Mashupstack";        // x is a string
+        var y = new String("Mashupstack");  // y is an object
+
+        document.getElementById("demo").innerHTML =
+        typeof x + "<br>" + typeof y;
+        // == returns true since value is equal
+        document.getElementById("demo1").innerHTML = (x==y);
+
+        // === returns false since type not equal
+        document.getElementById("demo2").innerHTML = (x===y);
+
+        // text lngth
+        document.getElementById("demo3").innerHTML = x.length;
+        var position = "Please find where 'Mashupstack' occurs!";
+        var pos = position.indexOf("Mashupstack");
+        document.getElementById("demo4").innerHTML = pos;
+        var position = "Please find where 'Mashupstack' occurs!.There are two 'Mashupstack' in the sentence.";
+        var pos = position.lastIndexOf("Mashupstack");
+        document.getElementById("demo5").innerHTML = pos;
+        var pos = position.indexOf("Javascript");
+        document.getElementById("demo6").innerHTML = pos;
+        var position = " Mashupstack locate where 'Mashupstack' occurs!";
+        var pos = position.indexOf("Mashupstack" , 17);
+        document.getElementById("demo7").innerHTML = pos;
+
+        // backward search
+        var pos = position.lastIndexOf("Mashupstack" , 17);
+        document.getElementById("demo8").innerHTML = pos;
+
+        // search
+        var pos = position.search("Mashupstack" );
+        document.getElementById("demo9").innerHTML = pos;
+    </script>
+</body>  
+</html>

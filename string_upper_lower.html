@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js string upper lower case</title>
+</head>
+<body>
+
+    <p>Convert string to upper case:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo">Mashupstack</p>
+    <p id="demo1"></p>
+    <script>
+        function myFunction() {
+            var text = document.getElementById("demo").innerHTML;
+            // upper lower toggle
+            if(text == text.toLowerCase()){
+                
+                document.getElementById("demo").innerHTML = text.toUpperCase();
+            }
+            else{
+                document.getElementById("demo").innerHTML = text.toLowerCase();
+            }
+
+        }
+        var text1 = "Welcome to";
+        var text2 = "Mashup Stack.";
+        var text3 = text1.concat(" ",text2);
+        document.getElementById("demo").innerHTML = text3;
+    </script>
+
+</body>
+</html>
