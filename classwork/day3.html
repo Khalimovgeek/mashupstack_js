@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <script>
+        var feedback = "   I loved the FOOD and the service!   ";
+        feedback = feedback.trim(); // remove the blank space
+        console.log(feedback);
+
+        // lowercase operation
+
+        feedback_lowercase = feedback.toLowerCase();
+        console.log(feedback_lowercase);
+
+        // replace food with ambience
+
+        feedback_replace = feedback.replace(/food/i,"ambience");
+        console.log(feedback_replace);
+
+        // find and print the position f word service
+
+        feedback_index = feedback.indexOf("service");
+        console.log(feedback_index);
+
+        // string to array
+
+        feedback_array = feedback.split(" ");
+        console.log(feedback_array);
+    </script>
+</body>
+</html>
