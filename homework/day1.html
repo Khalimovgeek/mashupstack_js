@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var items = {
+            'rice' : 300,
+            'sugar': 400,
+            'wheat': 500
+        }
+        var quantity_rice  = 4;
+        var quantity_sugar = 3;
+        var quantity_wheat = 1;
+
+        TotalBill = quantity_rice  * items['rice'] +
+                    quantity_sugar * items['sugar'] +
+                    quantity_wheat * items['wheat'];
+        
+        console.log("price when qquantity of rice = 4 \n" + TotalBill)
+        quantity_rice = 5;
+        TotalBill = quantity_rice  * items['rice'] +
+                    quantity_sugar * items['sugar'] +
+                    quantity_wheat * items['wheat'];
+        
+        console.log("price when quantity of rice = 5  \n" + TotalBill);
+    </script>
+</body>
+</html>
