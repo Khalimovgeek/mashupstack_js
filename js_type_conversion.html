@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="scripts.js"></script>
+    <script>
+        
+        //implicit
+        writeOnHtml('conversion to string', 'h');
+        var result_1 = '5' + 0;
+        writeOnHtml(result_1);
+        typeOfResult(result_1);
+
+        var result_2 = '5' + true;
+        writeOnHtml(result_2);
+        typeOfResult(result_2);
+
+        var result_3 = '4' + 5;
+        writeOnHtml(result_3);
+        typeOfResult(result_3);
+
+        var result_4 = '4' + undefined;
+        writeOnHtml(result_4);
+        typeOfResult(result_4);
+
+
+        writeOnHtml('conversion to integer (only works for aritmetic operator excluding "+")','h');
+        var result_1 = '5' - '0';
+        writeOnHtml(result_1);
+        typeOfResult(result_1);
+
+        var result_1 = '5' - 4;
+        writeOnHtml(result_1);
+        typeOfResult(result_1);
+
+        var result_1 = '5' * 4;
+        writeOnHtml(result_1);
+        typeOfResult(result_1);
+
+        var result_1 = '20' / 4;
+        writeOnHtml(result_1);
+        typeOfResult(result_1);
+
+        writeOnHtml('Non-numeric string results NaN', 'h');
+        var result_45 = 'Hello' * 'JavaScript';
+        writeOnHtml(result_45);
+
+        var result_2 = '5' * 'Javascript';
+        writeOnHtml(result_2);
+
+
+        writeOnHtml('Implicit Boolean Conversion to Number', 'h');
+        var result_1 = 'Hello' - true;
+        writeOnHtml(result_1);
+
+        var result_2 = 5 + true;
+        writeOnHtml(result_2);
+
+        var result_3 = 1 + false;
+        writeOnHtml(result_3);
+
+        writeOnHtml('Null Conversion to Number', 'h');
+        var result_1 = 5 + null;
+        writeOnHtml(result_1);
+        var result_1 = 5 - null;
+        writeOnHtml(result_1);
+
+        writeOnHtml(' undefined when used with a number, boolean or null', 'h');
+        result_1 = 5 + undefined;
+        writeOnHtml(result_1);
+
+        result_2 = 5 - undefined;
+        writeOnHtml(result_2);
+
+        result_3 = false + undefined;
+        writeOnHtml(result_3);
+
+        result_4 = null + undefined;
+        writeOnHtml(result_4);
+
+
+
+        writeOnHtml('explicit type conversion' , 'h');
+        var result_1 = Number('890');
+        var result_2 = Number(true);
+        var result_3 = Number(false);
+        var result_4 = Number(null);
+        var result_5 = Number(' ');
+        var result_6 = Number('890e-1');
+        var result_7 = Number('JavaScript');
+        var result_8 = Number(undefined);
+        var result_9 = Number(NaN);
+        writeOnHtml(result_1);
+        writeOnHtml(result_2);
+        writeOnHtml(result_3);
+        writeOnHtml(result_4);
+        writeOnHtml(result_5);
+        writeOnHtml(result_6);
+        writeOnHtml(result_7);
+        writeOnHtml(result_8);
+        writeOnHtml(result_9);
+
+
+        // conversion by ciel and floor
+        var result_1 = Math.ceil(46.3)
+        writeOnHtml(result_1);
+        typeOfResult(result_1);
+        var result_2 = Math.floor(46.3)
+        writeOnHtml(result_2);
+        typeOfResult(result_2);
+
+
+        // conversion to string
+        var out1 = String(500);
+        var out2 = String(3+2);
+        var out3 = String(null);
+        writeOnHtml(out1);
+        writeOnHtml(out2);
+        writeOnHtml(out3);
+        typeOfResult(out1);
+        typeOfResult(out2);
+        typeOfResult(out3);
+
+
+        // conversion to boolean
+        var out1 = Boolean("");
+        var out2 = Boolean(0);
+        var out3 = Boolean(undefined);
+        output = Boolean(null);
+        output = Boolean(null);
+        writeOnHtml(output);
+        output = Boolean(NaN);
+        writeOnHtml(output);
+        output = Boolean(324);
+        writeOnHtml(output);
+        output = Boolean('hello');
+        writeOnHtml(output);
+        output = Boolean(" "); // has a space character, not an empty value
+        writeOnHtml(output);
+        writeOnHtml(out1);
+        writeOnHtml(out2);
+        writeOnHtml(out3);
+        typeOfResult(out1);
+        typeOfResult(out2);
+        typeOfResult(out3);
+    </script>
+</body>
+</html>
