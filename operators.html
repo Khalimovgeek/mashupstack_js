@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="scripts.js"></script>
+    <script>
+        const a = 4;
+        const b = 5;
+        // arithmetic
+        let sum = a+b;
+        let dif = a-b;
+        let mul = a*b;
+        let div = a/b;
+        let mod = a%b;
+        let exp = a**b;
+
+        writeOnHtml('arithmetic operations of a = 4 and b =5', 'h')
+        writeOnHtml(sum);
+        writeOnHtml(dif);
+        writeOnHtml(mul);
+        writeOnHtml(div);
+        writeOnHtml(mod);
+        writeOnHtml(exp);
+
+
+
+        // increment derecrement
+        let x = 9;
+        writeOnHtml('increment derecrement of x == 9','h');
+        writeOnHtml(x++);
+        writeOnHtml(x--);
+        writeOnHtml(--x);
+        writeOnHtml(++x);
+
+
+        // assignment operators
+        writeOnHtml('assignment operators','h')
+        let y = 10;
+        writeOnHtml(y);
+        writeOnHtml(y+=2);
+        writeOnHtml(y-=4);
+        writeOnHtml(y*=3);
+        writeOnHtml(y/=4);
+        writeOnHtml(y%=5);
+
+        // comparisson operator
+        writeOnHtml('comparisson operator','h')
+        writeOnHtml(y==3);
+        writeOnHtml(y<=3);
+        writeOnHtml(y>=2);
+        writeOnHtml(y!=9);
+
+
+        // logical operator
+        writeOnHtml('logical operator','h')
+        var k = 5
+        var m = 2
+        writeOnHtml('or')
+        writeOnHtml((k>m)|| (k<m));
+        writeOnHtml((m>k)|| (k<m));
+        writeOnHtml('and');
+        writeOnHtml((k>m) && (k<m));
+        writeOnHtml((k>m) &&  (k<x));
+        writeOnHtml('not');
+        writeOnHtml(k!=m);
+        var l = true
+        writeOnHtml(!l);
+
+
+        // conditional operator
+        writeOnHtml('Conditional (ternary) operator','h')
+        var age = 16;
+        var voteable = (age<18) ? "He is too young to vote.": "He is old enough to vote";
+        writeOnHtml(voteable)
+    </script>
+</body>
+</html>
