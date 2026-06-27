@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="scripts.js"></script>
+    <script>
+        var txt = ''
+        newArray = new Array(1,45,30,67,74,233,200,30);
+
+        // foreach
+        newArray.forEach(Myfuntion);
+        writeOnHtml(txt);
+        function Myfuntion(value,index,array){
+            txt += value + "<br>"
+        }
+        newArray1 = newArray.map(mapFuntion)
+        function mapFuntion(value){
+            return value*2
+        }
+        writeOnHtml(newArray1);
+        newArray2 = newArray.filter(filterFunction)
+        function filterFunction(value,index,array){
+            return value>100;
+        }
+        writeOnHtml(newArray2);
+        sum = newArray.reduce(reduceFunction)
+        function reduceFunction(total, value,index, array){
+            return total + value;
+        }
+        writeOnHtml(sum);
+        sum = newArray.reduce(reduceFunction, 100)
+        writeOnHtml(sum);
+        
+        over100 = newArray.every(everyFuntion)
+        function everyFuntion(value, index, array){
+            return value > 100
+        }
+        writeOnHtml(over100);
+
+        some100 = newArray.some(someFuntion)
+        function someFuntion(value, index, array){
+            return value > 100
+        }
+        writeOnHtml(some100);
+
+        indexOfValue = newArray.indexOf(30);
+        writeOnHtml(indexOfValue);
+
+        lastIndexOfValue = newArray.lastIndexOf(30);
+        writeOnHtml(lastIndexOfValue);
+
+        findValue = newArray.find(findFunction);
+        function findFunction(value,index,array){
+            return value > 70;
+        }
+        writeOnHtml(findValue);
+
+        findIndexValue = newArray.findIndex(findIndexOfFunction);
+        function findIndexOfFunction(value,index,array){
+            return value > 70;
+        }
+        writeOnHtml(findIndexValue);
+    </script>
+</body>
+</html>

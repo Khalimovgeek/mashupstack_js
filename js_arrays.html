@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="scripts.js"></script>
+    <script>
+        var array1 = ['apple','orange','grapes'];
+        writeOnHtml(array1);
+        var array2 = new Array('apple','orange','grapes');
+        writeOnHtml(array2);
+
+        writeOnHtml(array1[0]);
+
+        array1[0] = 'mango';
+        writeOnHtml(array1);
+
+        writeOnHtml(typeof(array1))
+        // myArray = new Array()    //we can store methods in an array
+        // myArray[0] = Date.now; // this is a method of date
+        // myArray[1] = myFunction;// this is a function
+        // myArray[2] = myCars;// this is a variable
+
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        writeOnHtml(fruits.length);
+
+        // last element
+        writeOnHtml(fruits[fruits.length-1])
+
+        for (let index = 0; index < fruits.length; index++) {
+            writeOnHtml(fruits[index]);            
+        }
+        fruits.push('lemons');
+        writeOnHtml(fruits)
+        var person = [];
+        person[0] = "virat";
+        person[1] = "kohli";
+        person[2] = 36;
+        person[3] = 46; 
+        writeOnHtml(person[0] + " " + person.length);
+        writeOnHtml(Array.isArray(fruits))
+    </script>
+</body>
+</html>

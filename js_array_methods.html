@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="scripts.js"></script>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        writeOnHtml(typeof(fruits));
+        var newarray = fruits.toString(); //tostring
+        writeOnHtml(typeof(newarray));
+        var joined = fruits.join('*');    // join array elements as a single element 
+        writeOnHtml(joined);               //result
+        writeOnHtml(typeof(joined));        // type will be string
+        //popping
+        fruits.pop();
+        writeOnHtml('new array after pop -->' + fruits);
+        // push
+        fruits.push('Lemon');
+        writeOnHtml('new array after push -->' + fruits);
+        // SHIFT 
+        fruits.shift(); //removes the first element
+        writeOnHtml(fruits)
+        fruits.unshift('Lemon');
+        writeOnHtml(fruits); //  shifts the values to one right ie, adds the new element to array index 0 and push the element in array 0 to 1 and so on
+        // add array by mentioning the length method
+        fruits[fruits.length] = 'Kiwi' // not recomended
+        writeOnHtml(fruits)
+        //delete --> not recommneded as it resultes in undefined elements in an array
+        delete fruits[3]
+        writeOnHtml(fruits)
+        writeOnHtml(fruits[3])  // returns undefined
+        //splicing --> adding elements to the array staring from a specific position . In push it is added to last 
+        fruits.splice(3,1, 'Mango','Tomato');  // elemnted added from arr[4] deleted 1 elements
+        writeOnHtml(fruits);
+        // array concat
+        new_fruits = new Array('Pomegranate','grape');
+        merged = fruits.concat(new_fruits); //concat  arrays
+        writeOnHtml(merged);
+        new_fruits2 = new Array('Dragon Fruit', 'Water Melon');
+        mergedTwo = fruits.concat(new_fruits,new_fruits2); // multiple concatanation
+        writeOnHtml(mergedTwo);
+
+        //merge but with value
+        mergedThree = fruits.concat('Dragon Fruit');
+        writeOnHtml(mergedThree);
+
+        
+        // sorting
+        fruits.sort()
+        writeOnHtml(fruits);   
+        fruits.reverse();
+        writeOnHtml(fruits);
+        //numerical sort
+        newArray = new Array(1,45,35,67,74,233,200,30);
+        newArray.sort(function(a,b){return a-b}); //sorted
+        writeOnHtml(newArray);
+        newArray1 = new Array(1,45,35,67,74,233,200,30);
+        newArray1.sort(function(a,b){return b-a});  // reverse
+        writeOnHtml(newArray1);
+
+        // random sort 
+        newArray2 = new Array(1,45,35,67,74,233,200,30);
+        newArray2.sort(function(a,b){return 0.5 - Math.random()});
+        writeOnHtml(newArray2);
+
+
+        // highest lowest
+        newArray3 = new Array(1,45,35,67,74,233,200,30);
+        arrayMax  = Math.max.apply(null,newArray3);
+        arrayMin  = Math.min.apply(null,newArray3);
+        writeOnHtml(`largest is ${arrayMax} and smallest is ${arrayMin}`);
+
+        // sorting object array
+        var cars = [
+            {type:"Volvo", year:2016},
+            {type:"Audi", year:2001},
+            {type:"BMW", year:2010}
+        ];
+        cars.sort(function(a,b){ return a.year - b.year});
+        writeOnHtml(
+            cars[0].type + " " + cars[0].year + "<br>" +
+            cars[1].type + " " + cars[1].year + "<br>" +
+            cars[2].type + " " + cars[2].year
+        )
+
+    </script>    
+</body>
+</html>
