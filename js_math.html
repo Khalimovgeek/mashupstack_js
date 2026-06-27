@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        function writeOnHtml(str){
+            document.write(`<p'>${str}</p>`);
+        }
+        // math only works for BingInt
+        writeOnHtml("Value of Pi " + Math.PI); // Pi value
+
+        // rounding number
+        writeOnHtml(" The value of  0.98485  after mat.round is" + Math.round(0.98485));
+
+
+        // math.floor
+        writeOnHtml(" The value of  0.98485  after mat.floor is" + Math.floor(0.98485));
+
+        // math.ceil
+        writeOnHtml(" The value of  0.98485  after mat.ceil is" + Math.ceil(0.98485));
+
+        // math.sqrt and pow
+        writeOnHtml("The power of 2 to 3 is " + Math.pow(2,3) + 
+                    ' and square root of 4 is ' + Math.sqrt(4) );
+
+        // trignometric funtions (sin,cos)
+        const DegToRad = Math.PI / 180;
+        const RadToDeg = 1 / DegToRad;
+        writeOnHtml(
+            `sin(90) is ${Math.sin(90 * DegToRad)} and cos(0) is ${Math.cos(0 * DegToRad)}`
+        );
+
+        let arr = [0, 15, 340, 260, -68, 200];
+        writeOnHtml('array is [' + arr + ']');
+        // min max
+        writeOnHtml('min is ' + Math.min(0, 15, 340, 260, -68, 200));
+        writeOnHtml('max is ' + Math.max(0, 15, 340, 260, -68, 200));
+
+        //random
+
+        writeOnHtml(Math.random()); // returns a value in between 0 and 1
+        function getRandomInt(max){  // funtion to get value in between 0 and an integers 
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+        //writeOnHtml(getRandomInt(5));  //5 not included
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function getRandomInt1(min,max){  // funtion to get value in between 0 and an integers 
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+    </script>
+    <div>
+        <p style="text-transform: capitalize;font-family: sans-serif; ">everytime the below button is clicked you will see a new value between 0 and 10</p>
+        <button onclick="document.getElementById('demo').innerHTML = (getRndInteger(0,10))">Click Here</button>
+        <p id="demo"></p>
+        <p>between two values</p>
+        <button onclick="document.getElementById('demo1').innerHTML = (getRandomInt1(1,10))">Click Here</button>
+        <p id="demo1"></p>
+    </div>
+</body>
+</html>
