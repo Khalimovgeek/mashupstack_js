@@ -9,3 +9,11 @@ function writeOnHtml(str,type ='p'){
 function typeOfResult(result){
     writeOnHtml(`The output type is ${typeof(result)} `);
 }
+function readFromHtml(question){
+    // document.writeln(`<label for="jsText">${question}</label>`)
+    // document.writeln(`<input type="text" name = 'jsText' id="jsText">`);
+    
+    // const value =document.getElementById('jsText');
+    var value = prompt(question)
+    return value;
+}

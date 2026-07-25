@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <script>
+        function runLoop(value, iterations){
+            for (i =0 ; i<iterations; i++){
+                writeOnHtml(value);
+            }
+        }
+        runLoop("Hello World", 10);
+
+        for(i=0;i<5;i++){
+            writeOnHtml("The number is " + i )
+        }
+        const fruits = ["watermelon", "banana", "guava", "orange", "apple"];
+        var i, len, text;
+        for (i = 0, len = fruits.length, text = ""; i < len; i++) {
+            text += fruits[i] + "<br>";
+        }
+        writeOnHtml(text);
+        var i = 0;
+        var len = fruits.length;
+        var text1 = "";
+
+        for (; i < len; i++) {
+        text1 += fruits[i] + "<br>";
+        }
+        writeOnHtml(text1);
+        var text = "";
+
+        for (; i < len; ) {
+        text += fruits[i] + "<br>";
+        i++;
+        }
+        writeOnHtml(text);
+
+
+        for(fruit in fruits){
+            writeOnHtml(fruits[fruit])
+        }
+        for(fruit of fruits){
+            writeOnHtml(fruit)
+        }
+        var txt = 'JavaScript';
+        for(x of txt){
+            writeOnHtml(x);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Switch</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <script>
+        let x = 1;
+
+        switch (x) {
+            case "1":
+                x = 1;
+                break;
+            case 1:
+                x = 'one';
+                break;
+            case 2:
+                x = 'two';
+                break;
+            default:
+                x = 'not found';
+                break;
+        }
+
+        writeOnHtml(`The value is ${x}`);
+
+        let player = 'Virat Kohli';
+        player = 'Gautam Gambhir'
+        switch(player) {
+            case 'Virat Kohli':
+            case 'Sourav Ganguly':
+            case 'Gautam Gambhir':
+                writeOnHtml(`${player} is a Cricket player.`);
+                break;
+
+            default:
+                writeOnHtml(`${player} is not a Cricket player.`);
+                break;
+        }
+        
+    </script>
+</body>
+</html>

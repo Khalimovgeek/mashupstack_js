@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS if else</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <script>
+        
+        var number = readFromHtml("Enter a number");
+        // if statement
+        if (number >0 ){
+            writeOnHtml("The number is positive");
+        }
+        // else if
+        else if(number == 0){
+            writeOnHtml("The number is zero")
+        }
+        // else statement
+        else{
+            writeOnHtml("The number is negative");
+        }
+
+
+        // nested if method
+        if (number >= 0){
+            if (number == 0){
+                writeOnHtml("The number is zero");
+            }
+            else{
+                 writeOnHtml("The number is positive");
+            }
+        }
+        else{
+            writeOnHtml("The number is negative");
+        }
+    </script>
+    
+</body>
+</html>
