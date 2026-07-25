@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <script>
+        var x = 3.14;
+        var y = 7;
+        output(x);
+        output(y);
+
+
+        writeOnHtml('js adding' , 'h');
+        z = x+y;
+        function output(value){
+            writeOnHtml("The output is " + value);
+            typeOfResult(value);
+        }
+        output(z);
+        let str1 = "5";
+        let str2 = "10"
+        let str3 = str1+str2;
+        output(str3);
+
+        let newOut = y+str1;
+        output(newOut);
+
+        newOut = str1+x;
+        output(newOut);
+
+        newOut = str1 +  x + y;
+        output(newOut);
+
+        newOut = str2/str1;
+        output(newOut);
+
+        newOut = str1*str2;
+        output(newOut);
+
+        newOut = str2-str1;
+        output(newOut);
+
+        newOut = 50/'five';
+        output(newOut);
+
+        newOut = 50/'5';
+        output(newOut);
+
+        newOut =  50 / "Apple";
+        writeOnHtml(`Is the output of 50/'Apple' is NaN ? ${isNaN(newOut)}`);
+        
+        x = NaN;
+        y = 5;
+        output(x+y);
+
+        writeOnHtml(typeof x);
+
+        writeOnHtml("JavaScript Numbers", 'h');
+        writeOnHtml("Infinity is returned if you calculate a number outside the largest possible number:")
+        var myNumber = 2; 
+        var txt = "";
+        while (myNumber != Infinity) {
+            myNumber = myNumber * myNumber;
+            txt = txt + myNumber + "<br>";
+        }
+        writeOnHtml(txt);
+        writeOnHtml("Division by zero generates Infinity;");
+        var x = 5/0;
+        var y = -5/0;
+        writeOnHtml(`${x} <br> ${y}`);
+
+
+        writeOnHtml("Numeric constants, preceded by 0x, are interpreted as hexadecimal:");
+        var x = 0xFF;
+        writeOnHtml( "0xFF = " + x)
+
+        var myNumber = 32;
+        writeOnHtml("The value for 32 in different bases are " + "<br>" + 
+                    " Decimal = " + myNumber.toString(10) + "<br>" +
+                    " Hexadecimal = " + myNumber.toString(16) + "<br>" +
+                    " Octal = " + myNumber.toString(8) + "<br>" +
+                    " Binary = " + myNumber.toString(2));
+    </script>
+</body>
+</html>

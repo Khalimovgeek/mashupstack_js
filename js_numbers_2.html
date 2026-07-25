@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <script>
+        var x = 456;
+        writeOnHtml(
+            x.toString() + "<br>" +
+            (456).toString() + "<br>" +
+            (400 + 56).toString()
+        );
+        var x = 9.656;
+        writeOnHtml(x.toExponential() + "<br>" + 
+        x.toExponential(2) + "<br>" + 
+        x.toExponential(4) + "<br>" + 
+        x.toExponential(6));
+
+        writeOnHtml(
+            x.toFixed(0) + "<br>"+
+            x.toFixed(2) + "<br>"+
+            x.toFixed(4) + "<br>"+
+            x.toFixed(6)
+        );
+
+        var x = 123;
+        writeOnHtml(
+            x.valueOf()  + "<br>"+
+            (123).valueOf() + "<br>" +
+            (100 + 23).valueOf()
+        );
+
+        var x = new Date("2020-07-13");
+        writeOnHtml("The Number() method converts variables to numbers:");
+        writeOnHtml(
+            Number(true) + "<br>" +
+            Number(false) + "<br>" +
+            Number("5") + "<br>" + 
+            Number("  5") + "<br>" +
+            Number("5  ") + "<br>" +
+            Number(" 5  ") + "<br>" +
+            Number("5.25") + "<br>" + 
+            Number("5,25") + "<br>" +
+            Number("5 25") + "<br>" +
+            Number("Javascript") + "<br>" +
+            Number(x)
+        );
+
+        writeOnHtml(
+            parseInt("5") + "<br>" +
+            parseInt("5.25") + "<br>" +
+            parseInt("5 8") + "<br>" +  
+            parseInt("5 years") + "<br>" +  
+            parseInt("years 5")
+        );
+
+       writeOnHtml(
+        parseFloat("5") + "<br>" +
+        parseFloat("5.25") + "<br>" +
+        parseFloat("5 8") + "<br>" +  
+        parseFloat("5 years") + "<br>" +
+        parseFloat("years 10")
+       );
+       var x = Number.MAX_VALUE;
+       writeOnHtml(x);
+       var y = Number.MIN_VALUE;
+       writeOnHtml(y);
+       var z = Number.POSITIVE_INFINITY;
+       writeOnHtml(z);
+       var w = Number.NEGATIVE_INFINITY;
+       writeOnHtml(w);
+
+       writeOnHtml(1/0);
+       writeOnHtml(-1/0);
+
+        //    Not a Number
+        writeOnHtml(Number.NaN);
+
+        writeOnHtml(x.MAX_VALUE);
+    </script>
+</body>
+</html>
