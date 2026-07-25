@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <script>
+        const months =  ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        // get date
+        let date = new Date();
+        function write(type, date){
+            writeOnHtml(`${type} is ${date}`);
+        }
+
+        // get functions
+        write('year', date.getFullYear() );
+        write('month', months[date.getMonth()]);
+        write('date', date.getDate());
+        write('hour', date.getHours());
+        write('minutes', date.getMinutes());
+        write('seconds', date.getSeconds());
+        write('millisecons', date.getMilliseconds());
+        write('Time in Milliseconds since january 1 1970', date.getTime());
+        write('time zone difference', date.getTimezoneOffset());
+
+        // set funtions
+
+        function SpecifiedDate(type,date){
+            writeOnHtml(`Specified ${type}`, 'h');
+            writeOnHtml(date);
+        }
+        date1 = new Date();
+        date1.setFullYear(2023);
+        SpecifiedDate('Year', date1);
+
+        date2 = new Date();
+        date2.setMonth(9);
+        SpecifiedDate('Month', date2);
+
+        date3 = new Date();
+        date3.setDate(6);
+        SpecifiedDate('Day', date3);
+
+        date4 = new Date();
+        date4.setHours(3);
+        SpecifiedDate('Hours', date4);
+
+        date5 = new Date();
+        date5.setMinutes(45);
+        SpecifiedDate('Minutes', date5);
+
+        date6 = new Date();
+        date6.setSeconds(3);
+        SpecifiedDate('Seconds', date6);
+
+
+
+        // date compare
+        date1 = new Date();
+        date2 = new Date(2027,4,3,2,5,6);
+        writeOnHtml(date1);
+        writeOnHtml(date2);
+        if (date1>date2){
+            writeOnHtml("given date is before today");
+        }
+        else{
+            writeOnHtml("given date is after today");
+        }
+        
+    </script>
+</body>
+</html>

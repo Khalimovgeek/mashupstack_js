@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dates</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <script>
+        writeOnHtml("Java Script Date", 'h');
+        var date = new Date();
+        writeOnHtml("Today is " + date);
+
+        // date is created with adding 0 milliseconds default date
+        var date = new Date(0);
+        writeOnHtml(date);
+
+        // date is created with adding 150000000000 milliseconds default date
+        var date = new Date(150000000000);
+        writeOnHtml(date);
+
+        var date = new Date(10000000000);
+        writeOnHtml(date);
+
+        // date string
+        var date = new Date("july 9, 2020 10:34:00")
+        writeOnHtml(date);
+
+        // year month 
+        var date = new Date(2026,6,25,9,33,30,0);
+        writeOnHtml(date);
+
+        // year month day hour minute only
+        var date = new Date(2026,6,25,9,35);
+        writeOnHtml(date);
+
+        //  year, month, day, and hour
+        var date = new Date(2026,6,25,9);
+        writeOnHtml(date);
+
+        //  year, month, and day
+        var date = new Date(2026,6,25);
+        writeOnHtml(date);
+
+        //  year, month only
+        var date = new Date(2026,6);
+        writeOnHtml(date);
+
+        // to string
+        var date = new Date();
+        date = date.toString();
+        writeOnHtml(date);
+        typeOfResult(date);
+
+        //  to UTC string
+        var date = new Date();
+        date = date.toUTCString();
+        writeOnHtml(date);
+        typeOfResult(date);
+
+        // to date string
+        var date = new Date();
+        date = date.toDateString();
+        writeOnHtml(date);
+        typeOfResult(date);
+    </script>
+</body>
+</html>
